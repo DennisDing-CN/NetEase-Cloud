@@ -1,4 +1,5 @@
-import requests, execjs
+import requests
+import execjs
 
 with open('2.js', 'r', encoding='utf8') as f:
     line = f.read()
