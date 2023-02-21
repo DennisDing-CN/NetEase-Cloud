@@ -1,4 +1,5 @@
-import requests, execjs
+import requests
+import execjs
 
 with open('lyrics.js', 'r', encoding='utf-8')  as f:
     line = f.read()
@@ -13,7 +14,7 @@ data = {
     'params': huoqu['encText'],
     'encSecKey': huoqu['encSecKey']
 }
-# print(data)
+
 url = 'https://music.163.com/weapi/comment/resource/comments/get?csrf_token='
 response = requests.post(url, headers=headers, data=data)
 print(response)
